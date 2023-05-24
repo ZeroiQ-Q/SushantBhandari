@@ -185,7 +185,6 @@ body {
   height: 35px;
   width: 35px;
   position: absolute;
-  border: 1px solid rgb(72, 71, 71);
   opacity: 0.2;
   animation: boxes 20s infinite linear;
 }
