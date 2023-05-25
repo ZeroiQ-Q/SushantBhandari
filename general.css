@@ -417,4 +417,7 @@ body {
     height: 400px;
     width: 400px;
   }
+  .bottom-personal-details {
+    margin-left: 27px;
+  }
 }
