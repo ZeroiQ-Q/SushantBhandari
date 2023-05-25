@@ -11,7 +11,7 @@ body {
 
 .header-label {
   margin-top: 40px;
-  font: normal 900 72px league spartan, sans-serif;
+  font: normal 900 clamp(36px, 6vw, 72px) league spartan, sans-serif;
   -webkit-text-stroke: 2px rgb(151, 145, 145);
   color: rgb(24, 24, 24);
   text-transform: uppercase;
@@ -19,6 +19,7 @@ body {
   margin-right: 10px;
   animation: slide-in 1s, opacity-slide-in 1.5s ease-in-out;
 }
+
 .container {
   position: relative;
   width: 100%;
@@ -29,7 +30,7 @@ body {
 .profile-image {
   z-index: 100;
   height: 580px;
-  width: clamp(300px, 100%, 415px);
+  width: clamp(320px, 100%, 415px);
   border-radius: 32px;
   object-fit: cover;
   cursor: pointer;
@@ -39,7 +40,6 @@ body {
   scale: 1.03;
 }
 .top {
-  margin-left: 50px;
   display: flex;
   margin-top: 40px;
   margin: 40px 40px 0px 50px;
@@ -146,7 +146,7 @@ body {
 .school,
 .college {
   display: flex;
-  width: 600px;
+  width: 520px;
   gap: 16px;
 }
 .year-label {
@@ -185,6 +185,7 @@ body {
   height: 35px;
   width: 35px;
   position: absolute;
+  border: 1px solid rgb(72, 71, 71);
   opacity: 0.2;
   animation: boxes 20s infinite linear;
 }
@@ -289,5 +290,131 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 501px) {
+  .middle,
+  .top,
+  .bottom {
+    margin: 0 25px 0 25px;
+  }
+  .header-label {
+    margin-top: 20px;
+    margin-right: 6px;
+    font-size: 26px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px rgb(151, 145, 145);
+  }
+  .top {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 40px;
+  }
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .my-description {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+  }
+  .hr-inbetween {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .personal-info-section {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .name {
+    margin-bottom: 12px;
+  }
+  .personal_details {
+    font-size: 19px;
+  }
+  .bottom-personal-details {
+    margin-left: 27px;
+  }
+  .education {
+    margin-top: 30px;
+  }
+  .education-details {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .icon {
+    width: 26px;
+  }
+  .school,
+  .college {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+  }
+  .schooling {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .year-label {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .footer-label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .contacts {
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+  .contact-list {
+    height: 38px;
+    width: 38px;
+  }
+  .link {
+    height: 22px;
+    width: 22px;
+  }
+}
+@media (min-width: 502px) and (max-width: 860px) {
+  .middle,
+  .top,
+  .bottom {
+    margin: 30px 25px 0 25px;
+  }
+  .top,
+  .personal-info-section {
+    flex-direction: column;
+  }
+  .personal-info-section {
+    align-items: center;
+    gap: 0;
+  }
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-image {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
   }
 }
